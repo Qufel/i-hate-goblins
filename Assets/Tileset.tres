@@ -1,0 +1,52 @@
+[gd_resource type="TileSet" load_steps=4 format=3 uid="uid://bbur8bdgaddaa"]
+
+[ext_resource type="Texture2D" uid="uid://cnfvrf655wodc" path="res://Assets/Tileset.png" id="1_8oxn0"]
+
+[sub_resource type="TileMapPattern" id="TileMapPattern_h1m8k"]
+tile_data = PackedInt32Array(0, 196608, 0, 65536, 131072, 1, 131072, 131072, 1, 196608, 196608, 1, 1, 65536, 2, 65537, 196608, 2, 131073, 196608, 2, 196609, 65536, 0, 2, 65536, 2, 65538, 196608, 2, 131074, 196608, 2, 196610, 65536, 0, 3, 262144, 0, 65539, 0, 1, 131075, 0, 1, 196611, 262144, 1)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4lg3r"]
+texture = ExtResource("1_8oxn0")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+2:1/0 = 0
+1:1/0 = 0
+0:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+2:4/0 = 0
+1:4/0 = 0
+0:4/0 = 0
+0:5/0 = 0
+1:5/0 = 0
+2:5/0 = 0
+3:4/0 = 0
+3:5/0 = 0
+4:5/0 = 0
+4:4/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+3:1/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+4:1/0 = 0
+5:0/size_in_atlas = Vector2i(1, 3)
+5:0/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+6:3/0 = 0
+7:3/0 = 0
+7:2/0 = 0
+7:1/0 = 0
+7:0/0 = 0
+1:6/0 = 0
+1:7/0 = 0
+
+[resource]
+sources/0 = SubResource("TileSetAtlasSource_4lg3r")
+pattern_0 = SubResource("TileMapPattern_h1m8k")
