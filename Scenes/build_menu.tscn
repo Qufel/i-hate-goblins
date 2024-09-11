@@ -1,0 +1,78 @@
+[gd_scene load_steps=8 format=3 uid="uid://dtepqc5c5q8ad"]
+
+[ext_resource type="Script" path="res://Scripts/BuildMenu.gd" id="1_mnjd1"]
+[ext_resource type="Texture2D" uid="uid://dup2lhc0jnbmw" path="res://Assets/UI/ui.png" id="1_xf0yv"]
+[ext_resource type="Texture2D" uid="uid://cpbu4ih8vo8r0" path="res://Assets/UI/knights_icon.png" id="2_v1nxp"]
+[ext_resource type="Texture2D" uid="uid://b6i3dlfi4evbq" path="res://Assets/UI/archer_icon.png" id="3_jypac"]
+[ext_resource type="Texture2D" uid="uid://dnkdiq060xljh" path="res://Assets/UI/mage_icon.png" id="4_rqmj2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_em0bv"]
+texture = ExtResource("1_xf0yv")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+region_rect = Rect2(48, 48, 32, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jb3kd"]
+texture = ExtResource("1_xf0yv")
+texture_margin_left = 4.0
+texture_margin_top = 4.0
+texture_margin_right = 4.0
+texture_margin_bottom = 4.0
+region_rect = Rect2(0, 0, 32, 32)
+
+[node name="BuildMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -110.0
+offset_top = -110.0
+scale = Vector2(2, 2)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+script = ExtResource("1_mnjd1")
+
+[node name="BG" type="Panel" parent="."]
+layout_mode = 2
+offset_left = 14.5
+offset_top = 14.5
+offset_right = 94.5
+offset_bottom = 94.5
+theme_override_styles/panel = SubResource("StyleBoxTexture_em0bv")
+
+[node name="Knights" type="Button" parent="."]
+layout_mode = 2
+offset_left = 42.5
+offset_top = 3.5
+offset_right = 66.5
+offset_bottom = 27.5
+theme_override_styles/normal = SubResource("StyleBoxTexture_jb3kd")
+icon = ExtResource("2_v1nxp")
+
+[node name="Archers" type="Button" parent="."]
+layout_mode = 2
+offset_left = 81.5
+offset_top = 42.5
+offset_right = 105.5
+offset_bottom = 66.5
+theme_override_styles/normal = SubResource("StyleBoxTexture_jb3kd")
+icon = ExtResource("3_jypac")
+
+[node name="Mages" type="Button" parent="."]
+layout_mode = 2
+offset_left = 3.5
+offset_top = 42.5
+offset_right = 27.5
+offset_bottom = 66.5
+theme_override_styles/normal = SubResource("StyleBoxTexture_jb3kd")
+icon = ExtResource("4_rqmj2")
+
+[node name="Artillery" type="Button" parent="."]
+layout_mode = 2
+offset_left = 42.5
+offset_top = 81.5
+offset_right = 66.5
+offset_bottom = 105.5
+theme_override_styles/normal = SubResource("StyleBoxTexture_jb3kd")
+icon = ExtResource("4_rqmj2")

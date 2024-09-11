@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cqwhvoxg8vbhd"]
+
+[ext_resource type="Script" path="res://Scripts/TowerSlot.gd" id="1_csoq6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0yg15"]
+size = Vector2(40, 40)
+
+[node name="TowerSlot" type="Area2D"]
+script = ExtResource("1_csoq6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_0yg15")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

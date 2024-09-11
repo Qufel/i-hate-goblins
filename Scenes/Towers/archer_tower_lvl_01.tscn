@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://b33m66s8kuuns"]
+
+[ext_resource type="Script" path="res://Scripts/Tower/ArcherTower.gd" id="1_3o6b4"]
+[ext_resource type="PackedScene" uid="uid://dk8287a8cuehx" path="res://Scenes/Projectiles/arrow.tscn" id="2_d8xha"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_foal7"]
+size = Vector2(32, 32)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rav4e"]
+radius = 120.0
+
+[node name="ArcherTowerLvl01" type="Node2D"]
+script = ExtResource("1_3o6b4")
+arrow = ExtResource("2_d8xha")
+cost = 70
+
+[node name="TowerSprite" type="Sprite2D" parent="."]
+texture = SubResource("PlaceholderTexture2D_foal7")
+
+[node name="AttackRange" type="Area2D" parent="."]
+collision_mask = 3
+priority = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackRange"]
+shape = SubResource("CircleShape2D_rav4e")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="AttackRange" to="." method="_on_attack_range_body_entered"]
+[connection signal="body_exited" from="AttackRange" to="." method="_on_attack_range_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
